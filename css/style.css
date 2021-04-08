@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato';
+}
+.container {
+  margin: 0 auto;
+  width: 70%;
+  min-height: 70vh;
+  background-color: #558455;
+  border-radius: 300px;
+}
+.logo {
+  margin: 20px 0;
+  text-align: center;
+}
+.logo img {
+  max-width: 300px;
+}
+.new-todo {
+  text-align: center;
+}
+.new-todo input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  min-width: 300px;
+  margin-right: 10px;
+}
+.new-todo button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  min-width: 150px;
+}
+.todos-container {
+  margin: 40px auto;
+  width: 70%;
+  border-radius: 10px;
+  background: #c3cccc;
+  padding: 30px;
+}
+.todos-container ul {
+  list-style: none;
+}
+.todo {
+  border-bottom: 1px solid #DADEE1;
+  padding: 15px;
+}
+.todo:hover {
+  background: white;
+  border-radius: 10px;
+}
+.todo i {
+  float: right;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

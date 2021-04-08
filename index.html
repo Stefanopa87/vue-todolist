@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- VueJS -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <title>Vue - intro</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" charset="utf-8"></script>
+    </head>
+    <body>
+      <div id="app" class="container">
+            <div class="row">
+              <div class="logo">
+                <img src="https://www.boolean.careers/images/misc/logo.png" alt="logo di boolean">
+              </div>
+              <div class="new-todo">
+                <!-- con v-model associo array vuoto di JS al canale input -->
+                <input @keyUp.enter="add" v-model="newItem" type="text" name="" value="">
+
+                <button @click="add" class="cursor-pointer"type="button" name="button">Aggiungi</button>
+              </div>
+
+              <div class="todos-container">
+                <ul v-if="todos.length>0">
+                  <!-- con il v-for vado a ciclare gli elementi e indice (I) dentro a todos -->
+                  <li v-for="(todo, i) in todos"class="todo"> {{i + 1}} {{todo}}
+                    <!-- passo I anche nel clcik di <i> -->
+                    <i @click="deleteItem (i)" class="fas fa-trash-alt cursor-pointer"></i></li>
+                </ul>
+
+                <h1 v-else> Non hai nulla nella lista! <i class="far fa-hand-peace"></i></h1>
+
+              </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </body>
+</html>
